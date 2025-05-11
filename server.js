@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 
 import connectDB from "./config/db.js";
 import userRouter from './routes/userRoutes.js'
+import reportRouter from './routes/reportRoutes.js'
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 connectDB();
 
 app.use('/users', userRouter);
+app.use('/reports', reportRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Ruta no encontrada" });
