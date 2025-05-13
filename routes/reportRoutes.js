@@ -11,6 +11,6 @@ const router = express.Router();
 
 router.route("/").get(getReports).post(createReport);
 
-router.route("/:id").get(getReportById).delete(deleteReport).put(updateReport);
+router.route("/:id").get(getReportById).delete(deleteReport);
 
 export default router;

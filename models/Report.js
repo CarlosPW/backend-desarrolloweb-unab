@@ -22,14 +22,10 @@ const ReportSchema = new mongoose.Schema({
   latitud: {
     type: Number,
     required: [true, "La latitud es requerida"],
-    min: [-90, "La latitud debe ser mayor o igual a -90"],
-    max: [90, "La latitud debe ser menor o igual a 90"],
   },
   longitud: {
     type: Number,
     required: [true, "La longitud es requerida"],
-    min: [-180, "La longitud debe ser mayor o igual a -180"],
-    max: [180, "La longitud debe ser menor o igual a 180"],
   },
 });
 
